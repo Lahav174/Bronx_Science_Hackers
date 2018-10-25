@@ -10,7 +10,7 @@ class ExpressionNode(object):
         self.left = random.randint(1,10)
         self.right = random.randint(1,10)
     def __str__(self):
-        return f'<{self.data}, {self.left}, {self.right}>'  
+        return '<' + str(self.data) + " " + str(self.left) + " " + str(self.right) + '>'  
 
 class RegularNode(object):
     def __init__(self, data):
@@ -18,7 +18,7 @@ class RegularNode(object):
         self.left = '*'
         self.right = '*'
     def __str__(self):
-        return f'<{self.data}, {self.left}, {self.right}>' 
+        return '<' + str(self.data) + " " + str(self.left) + " " + str(self.right) + '>'  
 
 # SET NODE EQUAL TO REGULARNODE FOR A STANDARD BINARY TREE, OR EXPRESSIONNODE FOR AN EXPRESSION TREE
 Node = RegularNode     
